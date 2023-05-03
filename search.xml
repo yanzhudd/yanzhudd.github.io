@@ -4,6 +4,95 @@
   
     
     <entry>
+      <title>Backtracking</title>
+      <link href="/p/527416199.html"/>
+      <url>/p/527416199.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p><a href="https://leetcode.com/problems/combination-sum/" target="_blank" rel="noopener">39. Combination Sum</a></p><p><a href="https://leetcode.com/problems/combination-sum-ii/description/" target="_blank" rel="noopener">40. Combination Sum II</a></p><p><a href="https://leetcode.com/problems/subsets/description/" target="_blank" rel="noopener">78. Subsets</a></p><p><a href="https://leetcode.com/problems/subsets-ii/description/" target="_blank" rel="noopener">90. Subsets II</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Problems </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Subsets</title>
+      <link href="/p/2189758150.html"/>
+      <url>/p/2189758150.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python Tools</title>
+      <link href="/p/3794759868.html"/>
+      <url>/p/3794759868.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Python-Tools"><a href="#Python-Tools" class="headerlink" title="Python Tools"></a>Python Tools</h2><h3 id="itertools"><a href="#itertools" class="headerlink" title="itertools"></a>itertools</h3><h4 id="itertools-islice-function"><a href="#itertools-islice-function" class="headerlink" title="itertools.islice() function"></a>itertools.islice() function</h4><h3 id="collections"><a href="#collections" class="headerlink" title="collections"></a>collections</h3><h4 id="discard-function-of-set"><a href="#discard-function-of-set" class="headerlink" title="discard() function of set"></a>discard() function of set</h4>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Heap</title>
+      <link href="/p/488345055.html"/>
+      <url>/p/488345055.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Heap"><a href="#Heap" class="headerlink" title="Heap"></a>Heap</h2><h2 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h2><p><a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank" rel="noopener">295. Find Median from Data Stream</a></p><p><a href="https://leetcode.com/problems/task-scheduler/" target="_blank" rel="noopener">621. Task Scheduler</a></p><p><a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/" target="_blank" rel="noopener">703. Kth Largest Element in a Stream</a></p><p><a href="https://leetcode.com/problems/k-closest-points-to-origin/" target="_blank" rel="noopener">973. K Closest Points to Origin</a></p><p><a href="https://leetcode.com/problems/last-stone-weight/" target="_blank" rel="noopener">1046. Last Stone Weight</a></p><p><a href="https://leetcode.com/problems/smallest-number-in-infinite-set/" target="_blank" rel="noopener">2336. Smallest Number in Infinite Set</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Problems </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Array</title>
+      <link href="/p/1624097203.html"/>
+      <url>/p/1624097203.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p><a href="https://leetcode.com/problems/restore-the-array/description/" target="_blank" rel="noopener">1416. Restore The Array</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Problems </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Binary Tree</title>
       <link href="/p/3772930202.html"/>
       <url>/p/3772930202.html</url>
@@ -11,6 +100,12 @@
         <content type="html"><![CDATA[<h2 id="Binary-Tree"><a href="#Binary-Tree" class="headerlink" title="Binary Tree"></a>Binary Tree</h2><h3 id="Traversal"><a href="#Traversal" class="headerlink" title="Traversal"></a>Traversal</h3><h4 id="Preorder"><a href="#Preorder" class="headerlink" title="Preorder"></a>Preorder</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">preorder</span><span class="params">(root)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> [root.val] + preorder(root.left) + preorder(root.right) <span class="keyword">if</span> root <span class="keyword">else</span> []</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorder</span><span class="params">(root)</span>:</span></span><br><span class="line">    stack = [root]</span><br><span class="line">    ans = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> stack:</span><br><span class="line">        node = stack.pop()</span><br><span class="line">        <span class="keyword">if</span> node:</span><br><span class="line">            ans.append(node.val)</span><br><span class="line">            stack.append(node.right)</span><br><span class="line">            stack.append(node.left)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure><h4 id="Inorder"><a href="#Inorder" class="headerlink" title="Inorder"></a>Inorder</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorder</span><span class="params">(root)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> inorder(root.left) + [root.val] + inorder(root.right) <span class="keyword">if</span> root <span class="keyword">else</span> []</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorder</span><span class="params">(root)</span>:</span></span><br><span class="line">    stack = []</span><br><span class="line">    ans = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> stack <span class="keyword">or</span> root:</span><br><span class="line">        <span class="keyword">while</span> root:</span><br><span class="line">            stack.append(root)</span><br><span class="line">            root = root.left</span><br><span class="line">        node = stack.pop()</span><br><span class="line">        ans.append(node.val)</span><br><span class="line">        root = node.right</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure><h4 id="Postorder"><a href="#Postorder" class="headerlink" title="Postorder"></a>Postorder</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">postorder</span><span class="params">(root)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> postorder(root.left) + postorder(root.right) + [root.val] <span class="keyword">if</span> root <span class="keyword">else</span> []</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">postorder</span><span class="params">(root)</span>:</span></span><br><span class="line">    stack = [root]</span><br><span class="line">    ans = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> stack:</span><br><span class="line">        node = stack.pop()</span><br><span class="line">        <span class="keyword">if</span> node:</span><br><span class="line">            ans.append(node.val)</span><br><span class="line">            stack.append(node.left)</span><br><span class="line">            stack.append(node.right)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">postorder</span><span class="params">(root)</span>:</span></span><br><span class="line">    stack = [(root, <span class="literal">False</span>)]</span><br><span class="line">    ans = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> stack:</span><br><span class="line">        node, is_visited = stack.pop()</span><br><span class="line">        <span class="keyword">if</span> node:</span><br><span class="line">            <span class="keyword">if</span> is_visited:</span><br><span class="line">                ans.append(node.val)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append((node, <span class="literal">True</span>))</span><br><span class="line">                stack.append((node.right, <span class="literal">False</span>))</span><br><span class="line">                stack.append((node.left, <span class="literal">False</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> Problems </tag>
+            
+        </tags>
       
     </entry>
     
@@ -24,6 +119,12 @@
         <content type="html"><![CDATA[<h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p><a href="https://leetcode.com/problems/design-graph-with-shortest-path-calculator/description/" target="_blank" rel="noopener">2642. Design Graph With Shortest Path Calculator</a></p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> Problems </tag>
+            
+        </tags>
       
     </entry>
     
@@ -116,7 +217,7 @@
       
         <tags>
             
-            <tag> Pyhon </tag>
+            <tag> Python </tag>
             
         </tags>
       
@@ -129,13 +230,13 @@
       <link href="/p/2255764225.html"/>
       <url>/p/2255764225.html</url>
       
-        <content type="html"><![CDATA[<p><a href="https://leetcode.com/problems/sliding-window-maximum/description/" target="_blank" rel="noopener">239. Sliding Window Maximum</a></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p><a href="https://leetcode.com/problems/sliding-window-maximum/description/" target="_blank" rel="noopener">239. Sliding Window Maximum</a></p>]]></content>
       
       
       
         <tags>
             
-            <tag> Problem </tag>
+            <tag> Problems </tag>
             
         </tags>
       
@@ -154,7 +255,7 @@
       
         <tags>
             
-            <tag> Problem </tag>
+            <tag> Problems </tag>
             
         </tags>
       
@@ -173,7 +274,7 @@
       
         <tags>
             
-            <tag> Problem </tag>
+            <tag> Sort </tag>
             
         </tags>
       
@@ -186,13 +287,13 @@
       <link href="/p/3700626627.html"/>
       <url>/p/3700626627.html</url>
       
-        <content type="html"><![CDATA[<h2 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h2><a id="more"></a><h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p><a href="https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/" target="_blank" rel="noopener">1319. Number of Operations to Make Network Connected</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h2><a id="more"></a><h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p><a href="https://leetcode.com/problems/reconstruct-itinerary/description/" target="_blank" rel="noopener">332. Reconstruct Itinerary</a></p><p><a href="https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/" target="_blank" rel="noopener">1319. Number of Operations to Make Network Connected</a></p>]]></content>
       
       
       
         <tags>
             
-            <tag> Problem </tag>
+            <tag> Problems </tag>
             
         </tags>
       
@@ -205,13 +306,13 @@
       <link href="/p/528044520.html"/>
       <url>/p/528044520.html</url>
       
-        <content type="html"><![CDATA[<h2 id="Disjoint-set-implementation-in-Python"><a href="#Disjoint-set-implementation-in-Python" class="headerlink" title="Disjoint set implementation in Python"></a>Disjoint set implementation in Python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DisjointSet</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        self.parent = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(n)]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">union</span><span class="params">(self, i, j)</span>:</span></span><br><span class="line">        root_i = self.find(i)</span><br><span class="line">        root_j = self.find(j)</span><br><span class="line">        self.parent[root_i] = root_j</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find</span><span class="params">(self, i)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.parent[i] == i:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        self.parent[i] = self.find(self.parent[i])</span><br><span class="line">        <span class="keyword">return</span> self.parent[i]</span><br></pre></td></tr></table></figure><h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p><a href="https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/" target="_blank" rel="noopener">1319. Number of Operations to Make Network Connected</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="Disjoint-set-implementation-in-Python"><a href="#Disjoint-set-implementation-in-Python" class="headerlink" title="Disjoint set implementation in Python"></a>Disjoint set implementation in Python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DisjointSet</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        self.parent = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(n)]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">union</span><span class="params">(self, i, j)</span>:</span></span><br><span class="line">        root_i = self.find(i)</span><br><span class="line">        root_j = self.find(j)</span><br><span class="line">        self.parent[root_i] = root_j</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find</span><span class="params">(self, i)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.parent[i] == i:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        self.parent[i] = self.find(self.parent[i])</span><br><span class="line">        <span class="keyword">return</span> self.parent[i]</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UnionFind</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        self.parent = list(range(n))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find</span><span class="params">(self, node)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> node != self.parent[node]:</span><br><span class="line">            self.parent[node] = self.find(self.parent[node])</span><br><span class="line">        <span class="keyword">return</span> self.parent[node]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">union</span><span class="params">(self, node1, node2)</span>:</span></span><br><span class="line">        root1 = self.find(node1)</span><br><span class="line">        root2 = self.find(node2)</span><br><span class="line">        <span class="keyword">if</span> root1 == root2:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        self.parent[root1] = root2</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure><h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p><a href="https://leetcode.com/problems/redundant-connection/description/" target="_blank" rel="noopener">684. Redundant Connection</a></p><p><a href="https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/" target="_blank" rel="noopener">1319. Number of Operations to Make Network Connected</a></p><p><a href="https://leetcode.com/problems/checking-existence-of-edge-length-limited-paths/description/" target="_blank" rel="noopener">1697. Checking Existence of Edge Length</a></p>]]></content>
       
       
       
         <tags>
             
-            <tag> Problem </tag>
+            <tag> Problems </tag>
             
         </tags>
       
