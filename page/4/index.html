@@ -280,6 +280,125 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://yanzhudd.github.io/p/741932282.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yanzhudd">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kamfal's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/p/741932282.html" itemprop="url">
+                  Heap Sort
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-03-27T23:09:25+08:00">
+                2023-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Heap-Sort"><a href="#Heap-Sort" class="headerlink" title="Heap Sort"></a>Heap Sort</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HeapSort</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sort</span><span class="params">(self, arr: List[int])</span>:</span></span><br><span class="line">        self._build_heap(arr)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># sort: O(nlogn)</span></span><br><span class="line">        length = len(arr)</span><br><span class="line">        <span class="keyword">for</span> end_index <span class="keyword">in</span> range(length - <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">            arr[<span class="number">0</span>], arr[end_index] = arr[end_index], arr[<span class="number">0</span>]</span><br><span class="line">            self._heapify(arr, <span class="number">0</span>, end_index - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># build heap: O(n)</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_build_heap</span><span class="params">(self, arr: List[int])</span>:</span></span><br><span class="line">        length = len(arr)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range((length - <span class="number">1</span>) &gt;&gt; <span class="number">1</span>, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">            self._heapify(arr, i, length - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_heapify</span><span class="params">(self, arr: List[int], start_index: int, end_index: int)</span>:</span></span><br><span class="line">        cur, left, right = start_index, (start_index &lt;&lt; <span class="number">1</span>) + <span class="number">1</span>, (start_index &lt;&lt; <span class="number">1</span>) + <span class="number">2</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> left &lt;= end_index:</span><br><span class="line">            max_child_idx = right <span class="keyword">if</span> right &lt;= end_index <span class="keyword">and</span> arr[left] &lt; arr[right] <span class="keyword">else</span> left</span><br><span class="line">            <span class="keyword">if</span> arr[max_child_idx] &lt;= arr[cur]:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">            arr[cur], arr[max_child_idx] = arr[max_child_idx], arr[cur]</span><br><span class="line">            cur, left, right = max_child_idx, (max_child_idx &lt;&lt; <span class="number">1</span>) + <span class="number">1</span>, (max_child_idx &lt;&lt; <span class="number">1</span>) + <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://yanzhudd.github.io/p/3700626627.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -702,7 +821,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -713,7 +832,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
