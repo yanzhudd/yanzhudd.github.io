@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="153. Find Minimum in Rotated Sorted Array 12345678910class Solution:    def findMin(self, nums: List[int]) -&amp;gt; int:        l, r = 0, len(nums) - 1        while l &amp;lt; r:            m = l + ((r - l)">
+<meta name="description" content="Binary Treeleetcode33. Search in Rotated Sorted Array 153. Find Minimum in Rotated Sorted Array 12345678910class Solution:    def findMin(self, nums: List[int]) -&amp;gt; int:        l, r = 0, len(nums) -">
 <meta name="keywords" content="Problems">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Binary Search">
 <meta property="og:url" content="https://yanzhudd.github.io/p/4222665165.html">
 <meta property="og:site_name" content="Kamfal&#39;s Blog">
-<meta property="og:description" content="153. Find Minimum in Rotated Sorted Array 12345678910class Solution:    def findMin(self, nums: List[int]) -&amp;gt; int:        l, r = 0, len(nums) - 1        while l &amp;lt; r:            m = l + ((r - l)">
+<meta property="og:description" content="Binary Treeleetcode33. Search in Rotated Sorted Array 153. Find Minimum in Rotated Sorted Array 12345678910class Solution:    def findMin(self, nums: List[int]) -&amp;gt; int:        l, r = 0, len(nums) -">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2023-04-10T17:13:54.392Z">
+<meta property="og:updated_time" content="2023-06-24T16:32:34.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Binary Search">
-<meta name="twitter:description" content="153. Find Minimum in Rotated Sorted Array 12345678910class Solution:    def findMin(self, nums: List[int]) -&amp;gt; int:        l, r = 0, len(nums) - 1        while l &amp;lt; r:            m = l + ((r - l)">
+<meta name="twitter:description" content="Binary Treeleetcode33. Search in Rotated Sorted Array 153. Find Minimum in Rotated Sorted Array 12345678910class Solution:    def findMin(self, nums: List[int]) -&amp;gt; int:        l, r = 0, len(nums) -">
 
 
 
@@ -355,13 +355,15 @@
       
 
       
-        <p><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/" target="_blank" rel="noopener">153. Find Minimum in Rotated Sorted Array</a></p>
+        <h2 id="Binary-Tree"><a href="#Binary-Tree" class="headerlink" title="Binary Tree"></a>Binary Tree</h2><h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array/" target="_blank" rel="noopener">33. Search in Rotated Sorted Array</a></p>
+<p><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/" target="_blank" rel="noopener">153. Find Minimum in Rotated Sorted Array</a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMin</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        l, r = <span class="number">0</span>, len(nums) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> l &lt; r:</span><br><span class="line">            m = l + ((r - l) &gt;&gt; <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">if</span> nums[m] &gt; nums[r]:</span><br><span class="line">                l = m + <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                r = m</span><br><span class="line">        <span class="keyword">return</span> nums[l]</span><br></pre></td></tr></table></figure>
 
+<p><a href="https://leetcode.com/problems/find-peak-element/" target="_blank" rel="noopener">162. Find Peak Element</a></p>
 <p>bisect_left: 第一个大于等于</p>
 <p>bisect_right: 第一个大于</p>
-<p><a href="https://leetcode.com/problems/time-based-key-value-store/description/" target="_blank" rel="noopener">981. Time Based Key-Value Store</a></p>
-<p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array/description/" target="_blank" rel="noopener">33. Search in Rotated Sorted Array</a></p>
+<p><a href="https://leetcode.com/problems/time-based-key-value-store/" target="_blank" rel="noopener">981. Time Based Key-Value Store</a></p>
+<p><a href="https://leetcode.com/problems/count-zero-request-servers/" target="_blank" rel="noopener">2747. Count Zero Request Servers</a></p>
 
       
     </div>
@@ -457,8 +459,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="yanzhudd">
           <p class="site-author-name" itemprop="name">yanzhudd</p>
@@ -471,7 +482,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -507,6 +518,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Binary-Tree"><span class="nav-number">1.</span> <span class="nav-text">Binary Tree</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#leetcode"><span class="nav-number">1.1.</span> <span class="nav-text">leetcode</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
