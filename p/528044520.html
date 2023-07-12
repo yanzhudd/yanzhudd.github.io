@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="Kamfal&#39;s Blog">
 <meta property="og:description" content="Disjoint set implementation in Python1234567891011121314class DisjointSet:    def __init(self, n):        self.parent = [i for i in range(n)]    def union(self, i, j):        root_i = self.find(i)">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2023-05-07T10:53:48.796Z">
+<meta property="og:updated_time" content="2023-07-02T15:28:28.706Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Disjoint Set">
 <meta name="twitter:description" content="Disjoint set implementation in Python1234567891011121314class DisjointSet:    def __init(self, n):        self.parent = [i for i in range(n)]    def union(self, i, j):        root_i = self.find(i)">
@@ -359,7 +359,7 @@
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UnionFind</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        self.parent = list(range(n))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find</span><span class="params">(self, node)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> node != self.parent[node]:</span><br><span class="line">            self.parent[node] = self.find(self.parent[node])</span><br><span class="line">        <span class="keyword">return</span> self.parent[node]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">union</span><span class="params">(self, node1, node2)</span>:</span></span><br><span class="line">        root1 = self.find(node1)</span><br><span class="line">        root2 = self.find(node2)</span><br><span class="line">        <span class="keyword">if</span> root1 == root2:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        self.parent[root1] = root2</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p><a href="https://leetcode.com/problems/redundant-connection/" target="_blank" rel="noopener">684. Redundant Connection</a></p>
+<h3 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h3><p><a href="https://leetcode.com/problems/redundant-connection/" target="_blank" rel="noopener">684. Redundant Connection</a></p>
 <p><a href="https://leetcode.com/problems/number-of-operations-to-make-network-connected/" target="_blank" rel="noopener">1319. Number of Operations to Make Network Connected</a></p>
 <p><a href="https://leetcode.com/problems/checking-existence-of-edge-length-limited-paths/" target="_blank" rel="noopener">1697. Checking Existence of Edge Length</a></p>
 
@@ -480,7 +480,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -526,7 +526,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Disjoint-set-implementation-in-Python"><span class="nav-number">1.</span> <span class="nav-text">Disjoint set implementation in Python</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#leetcode"><span class="nav-number">1.1.</span> <span class="nav-text">leetcode</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Disjoint-set-implementation-in-Python"><span class="nav-number">1.</span> <span class="nav-text">Disjoint set implementation in Python</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode"><span class="nav-number">1.1.</span> <span class="nav-text">Leetcode</span></a></li></ol></li></ol></div>
             
 
           </div>

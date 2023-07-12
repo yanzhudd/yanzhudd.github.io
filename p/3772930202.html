@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="Kamfal&#39;s Blog">
 <meta property="og:description" content="Binary TreeTraversalPreorder12def preorder(root):    return [root.val] + preorder(root.left) + preorder(root.right) if root else []  123456789101112def inorder(root):    stack = [root]    ans = []">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2023-06-05T15:37:58.420Z">
+<meta property="og:updated_time" content="2023-07-02T15:28:26.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Binary Tree">
 <meta name="twitter:description" content="Binary TreeTraversalPreorder12def preorder(root):    return [root.val] + preorder(root.left) + preorder(root.right) if root else []  123456789101112def inorder(root):    stack = [root]    ans = []">
@@ -369,7 +369,7 @@
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">postorder</span><span class="params">(root)</span>:</span></span><br><span class="line">    stack = [(root, <span class="literal">False</span>)]</span><br><span class="line">    ans = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> stack:</span><br><span class="line">        node, is_visited = stack.pop()</span><br><span class="line">        <span class="keyword">if</span> node:</span><br><span class="line">            <span class="keyword">if</span> is_visited:</span><br><span class="line">                ans.append(node.val)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append((node, <span class="literal">True</span>))</span><br><span class="line">                stack.append((node.right, <span class="literal">False</span>))</span><br><span class="line">                stack.append((node.left, <span class="literal">False</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
 
-<h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p><a href="https://leetcode.com/problems/path-sum/" target="_blank" rel="noopener">112. Path Sum</a></p>
+<h3 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h3><p><a href="https://leetcode.com/problems/path-sum/" target="_blank" rel="noopener">112. Path Sum</a></p>
 <p><a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/" target="_blank" rel="noopener">114. Flatten Binary Tree to Linked List</a></p>
 <p><a href="https://leetcode.com/problems/sum-root-to-leaf-numbers/" target="_blank" rel="noopener">129. Sum Root to Leaf Numbers</a></p>
 
@@ -490,7 +490,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -536,7 +536,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Binary-Tree"><span class="nav-number">1.</span> <span class="nav-text">Binary Tree</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Traversal"><span class="nav-number">1.1.</span> <span class="nav-text">Traversal</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Preorder"><span class="nav-number">1.1.1.</span> <span class="nav-text">Preorder</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Inorder"><span class="nav-number">1.1.2.</span> <span class="nav-text">Inorder</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Postorder"><span class="nav-number">1.1.3.</span> <span class="nav-text">Postorder</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#leetcode"><span class="nav-number">1.2.</span> <span class="nav-text">leetcode</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Binary-Tree"><span class="nav-number">1.</span> <span class="nav-text">Binary Tree</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Traversal"><span class="nav-number">1.1.</span> <span class="nav-text">Traversal</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Preorder"><span class="nav-number">1.1.1.</span> <span class="nav-text">Preorder</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Inorder"><span class="nav-number">1.1.2.</span> <span class="nav-text">Inorder</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Postorder"><span class="nav-number">1.1.3.</span> <span class="nav-text">Postorder</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode"><span class="nav-number">1.2.</span> <span class="nav-text">Leetcode</span></a></li></ol></li></ol></div>
             
 
           </div>
