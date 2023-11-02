@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="Binary TreeTraversalPreorder12def preorder(root):    return [root.val] + preorder(root.left) + preorder(root.right) if root else []  123456789101112def inorder(root):    stack = [root]    ans = []">
+<meta name="description" content="Binary TreeTraversalPreorder12def preorder(root):    return [root.val] + preorder(root.left) + preorder(root.right) if root else []  123456789101112def preorder(root):    stack = [root]    ans = []">
 <meta name="keywords" content="Problems">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Binary Tree">
 <meta property="og:url" content="https://yanzhudd.github.io/p/3772930202.html">
 <meta property="og:site_name" content="Kamfal&#39;s Blog">
-<meta property="og:description" content="Binary TreeTraversalPreorder12def preorder(root):    return [root.val] + preorder(root.left) + preorder(root.right) if root else []  123456789101112def inorder(root):    stack = [root]    ans = []">
+<meta property="og:description" content="Binary TreeTraversalPreorder12def preorder(root):    return [root.val] + preorder(root.left) + preorder(root.right) if root else []  123456789101112def preorder(root):    stack = [root]    ans = []">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2023-07-02T15:28:26.186Z">
+<meta property="og:updated_time" content="2023-09-14T13:43:35.869Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Binary Tree">
-<meta name="twitter:description" content="Binary TreeTraversalPreorder12def preorder(root):    return [root.val] + preorder(root.left) + preorder(root.right) if root else []  123456789101112def inorder(root):    stack = [root]    ans = []">
+<meta name="twitter:description" content="Binary TreeTraversalPreorder12def preorder(root):    return [root.val] + preorder(root.left) + preorder(root.right) if root else []  123456789101112def preorder(root):    stack = [root]    ans = []">
 
 
 
@@ -357,7 +357,7 @@
       
         <h2 id="Binary-Tree"><a href="#Binary-Tree" class="headerlink" title="Binary Tree"></a>Binary Tree</h2><h3 id="Traversal"><a href="#Traversal" class="headerlink" title="Traversal"></a>Traversal</h3><h4 id="Preorder"><a href="#Preorder" class="headerlink" title="Preorder"></a>Preorder</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">preorder</span><span class="params">(root)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> [root.val] + preorder(root.left) + preorder(root.right) <span class="keyword">if</span> root <span class="keyword">else</span> []</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorder</span><span class="params">(root)</span>:</span></span><br><span class="line">    stack = [root]</span><br><span class="line">    ans = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> stack:</span><br><span class="line">        node = stack.pop()</span><br><span class="line">        <span class="keyword">if</span> node:</span><br><span class="line">            ans.append(node.val)</span><br><span class="line">            stack.append(node.right)</span><br><span class="line">            stack.append(node.left)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">preorder</span><span class="params">(root)</span>:</span></span><br><span class="line">    stack = [root]</span><br><span class="line">    ans = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> stack:</span><br><span class="line">        node = stack.pop()</span><br><span class="line">        <span class="keyword">if</span> node:</span><br><span class="line">            ans.append(node.val)</span><br><span class="line">            stack.append(node.right)</span><br><span class="line">            stack.append(node.left)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
 
 <h4 id="Inorder"><a href="#Inorder" class="headerlink" title="Inorder"></a>Inorder</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorder</span><span class="params">(root)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> inorder(root.left) + [root.val] + inorder(root.right) <span class="keyword">if</span> root <span class="keyword">else</span> []</span><br></pre></td></tr></table></figure>
 
@@ -490,7 +490,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -501,7 +501,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
