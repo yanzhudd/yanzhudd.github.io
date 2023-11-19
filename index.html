@@ -357,7 +357,138 @@
       
         
           
-            <h2 id="System-Design-Interview"><a href="#System-Design-Interview" class="headerlink" title="System Design Interview"></a>System Design Interview</h2>
+            <h2 id="System-Design"><a href="#System-Design" class="headerlink" title="System Design"></a>System Design</h2><h3 id="02-Scale-From-Zero-To-Millions-Of-Users"><a href="#02-Scale-From-Zero-To-Millions-Of-Users" class="headerlink" title="02 Scale From Zero To Millions Of Users"></a>02 Scale From Zero To Millions Of Users</h3><p>Relational databases are also called a relational database management system (RDBMS) or SQL database. The most popular ones are MySQL, Oracle database, PostgreSQL, etc. Relational databases represent and store data in tables and rows. You can perform join operations using SQL across different database tables.</p>
+<p>Non-Relational databases are also called NoSQL databases. Popular ones are CouchDB, Neo4j, Cassandra, HBase, Amazon DynamoDB, etc. [2]. These databases are grouped into four categories: key-value stores, graph stores, column stores, and document stores. Join operations are generally not supported in non-relational databases.</p>
+<p>For most developers, relational databases are the best option because they have been around for over 40 years and historically, they have worked well. However, if relational databases are not suitable for your specific use cases, it is critical to explore beyond relational databases. Non-relational databases might be the right choice if:</p>
+<ul>
+<li><p>Your application requires super-low latency.</p>
+</li>
+<li><p>Your data are unstructured, or you do not have any relational data.</p>
+</li>
+<li><p>You only need to serialize and deserialize data (JSON, XML, YAML, etc.).</p>
+</li>
+<li><p>You need to store a massive amount of data.</p>
+</li>
+</ul>
+<p>Vertical scaling, referred to as “scale up”, means the process of adding more power (CPU, RAM, etc.) to your servers. Horizontal scaling, referred to as “scale-out”, allows you to scale by adding more servers into your pool of resources.</p>
+<h2 id="03-Back-of-the-envelope-Estimation"><a href="#03-Back-of-the-envelope-Estimation" class="headerlink" title="03 Back-of-the-envelope Estimation"></a>03 Back-of-the-envelope Estimation</h2><h3 id="Power-of-two"><a href="#Power-of-two" class="headerlink" title="Power of two"></a>Power of two</h3><p>Although data volume can become enormous when dealing with distributed systems, calculation all boils down to the basics. To obtain correct calculations, it is critical to know the data volume unit using the power of 2. A byte is a sequence of 8 bits. An ASCII character uses one byte of memory (8 bits). Below is a table explaining the data volume unit.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Power</th>
+<th align="left">Approximate value</th>
+<th align="left">Full name</th>
+<th align="left">Short name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">10</td>
+<td align="left">1 Thousand</td>
+<td align="left">1 Kilobyte</td>
+<td align="left">1 KB</td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left">1 Million</td>
+<td align="left">1 Megabyte</td>
+<td align="left">1 MB</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left">1 Billion</td>
+<td align="left">1 Gigabyte</td>
+<td align="left">1 GB</td>
+</tr>
+<tr>
+<td align="left">40</td>
+<td align="left">1 Trillion</td>
+<td align="left">1 Terabyte</td>
+<td align="left">1 TB</td>
+</tr>
+<tr>
+<td align="left">50</td>
+<td align="left">1 Quadrillion</td>
+<td align="left">1 Petabyte</td>
+<td align="left">1 PB</td>
+</tr>
+</tbody></table>
+<h3 id="Latency-numbers-every-programmer-should-know"><a href="#Latency-numbers-every-programmer-should-know" class="headerlink" title="Latency numbers every programmer should know"></a>Latency numbers every programmer should know</h3><p>Dr. Dean from Google reveals the length of typical computer operations in 2010. Some numbers are outdated as computers become faster and more powerful. However, those numbers should still be able to give us an idea of the fastness and slowness of different computer operations.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Operation name</th>
+<th align="left">Time</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">L1 cache reference</td>
+<td align="left">0.5 ns</td>
+</tr>
+<tr>
+<td align="left">Branch mispredict</td>
+<td align="left">5 ns</td>
+</tr>
+<tr>
+<td align="left">L2 cache reference</td>
+<td align="left">7 ns</td>
+</tr>
+<tr>
+<td align="left">Mutex lock/unlock</td>
+<td align="left">100 ns</td>
+</tr>
+<tr>
+<td align="left">Main memory reference</td>
+<td align="left">100 ns</td>
+</tr>
+<tr>
+<td align="left">Compress 1K bytes with Zippy</td>
+<td align="left">10,000 ns = 10 µs</td>
+</tr>
+<tr>
+<td align="left">Send 2K bytes over 1 Gbps network</td>
+<td align="left">20,000 ns = 20 µs</td>
+</tr>
+<tr>
+<td align="left">Read 1 MB sequentially from memory</td>
+<td align="left">250,000 ns = 250 µs</td>
+</tr>
+<tr>
+<td align="left">Round trip within the same datacenter</td>
+<td align="left">500,000 ns = 500 µs</td>
+</tr>
+<tr>
+<td align="left">Disk seek</td>
+<td align="left">10,000,000 ns = 10 ms</td>
+</tr>
+<tr>
+<td align="left">Read 1 MB sequentially from the network</td>
+<td align="left">10,000,000 ns = 10 ms</td>
+</tr>
+<tr>
+<td align="left">Read 1 MB sequentially from disk</td>
+<td align="left">30,000,000 ns = 30 ms</td>
+</tr>
+<tr>
+<td align="left">Send packet CA (California) -&gt;Netherlands-&gt;CA</td>
+<td align="left">150,000,000 ns = 150 ms</td>
+</tr>
+</tbody></table>
+<p>Notes</p>
+<p>ns = nanosecond, µs = microsecond, ms = millisecond</p>
+<p>1 ns = 10^-9 seconds</p>
+<p>1 µs= 10^-6 seconds = 1,000 ns</p>
+<p>1 ms = 10^-3 seconds = 1,000 µs = 1,000,000 ns</p>
+<p>By analyzing the numbers in Figure 1, we get the following conclusions:</p>
+<ul>
+<li>Memory is fast but the disk is slow.</li>
+<li>Avoid disk seeks if possible.</li>
+<li>Simple compression algorithms are fast.</li>
+<li>Compress data before sending it over the internet if possible.</li>
+<li>Data centers are usually in different regions, and it takes time to send data between them.</li>
+</ul>
+<h3 id="Availability-numbers"><a href="#Availability-numbers" class="headerlink" title="Availability numbers"></a>Availability numbers</h3><p>High availability is the ability of a system to be continuously operational for a desirably long period of time. High availability is measured as a percentage, with 100% means a service that has 0 downtime. Most services fall between 99% and 100%.</p>
+<p>A service level agreement (SLA) is a commonly used term for service providers. This is an agreement between you (the service provider) and your customer, and this agreement formally defines the level of uptime your service will deliver. Cloud providers Amazon [4], Google [5] and Microsoft [6] set their SLAs at 99.9% or above. Uptime is traditionally measured in nines. The more the nines, the better.</p>
+
           
         
       
@@ -474,11 +605,7 @@
       
         
           
-            <h2 id="Problem-TODO"><a href="#Problem-TODO" class="headerlink" title="Problem TODO"></a>Problem TODO</h2><h3 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h3><p><a href="https://leetcode.com/problems/flatten-nested-list-iterator/" target="_blank" rel="noopener">341. Flatten Nested List Iterator</a></p>
-<p><a href="https://leetcode.com/problems/poor-pigs/" target="_blank" rel="noopener">458. Poor Pigs</a></p>
-<p><a href="https://leetcode.com/problems/binary-trees-with-factors/" target="_blank" rel="noopener">823. Binary Trees With Factors</a></p>
-<p><a href="https://leetcode.com/problems/constrained-subsequence-sum/" target="_blank" rel="noopener">1425. Constrained Subsequence Sum</a></p>
-<p><a href="https://leetcode.com/problems/maximum-score-of-a-good-subarray/" target="_blank" rel="noopener">1793. Maximum Score of a Good Subarray</a></p>
+            <h2 id="Problem-TODO"><a href="#Problem-TODO" class="headerlink" title="Problem TODO"></a>Problem TODO</h2><h3 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h3><p><a href="https://leetcode.com/problems/maximum-score-of-a-good-subarray/" target="_blank" rel="noopener">1793. Maximum Score of a Good Subarray</a></p>
 
           
         
