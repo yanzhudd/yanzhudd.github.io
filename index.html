@@ -371,7 +371,7 @@
 </li>
 </ul>
 <p>Vertical scaling, referred to as “scale up”, means the process of adding more power (CPU, RAM, etc.) to your servers. Horizontal scaling, referred to as “scale-out”, allows you to scale by adding more servers into your pool of resources.</p>
-<h2 id="03-Back-of-the-envelope-Estimation"><a href="#03-Back-of-the-envelope-Estimation" class="headerlink" title="03 Back-of-the-envelope Estimation"></a>03 Back-of-the-envelope Estimation</h2><h3 id="Power-of-two"><a href="#Power-of-two" class="headerlink" title="Power of two"></a>Power of two</h3><p>Although data volume can become enormous when dealing with distributed systems, calculation all boils down to the basics. To obtain correct calculations, it is critical to know the data volume unit using the power of 2. A byte is a sequence of 8 bits. An ASCII character uses one byte of memory (8 bits). Below is a table explaining the data volume unit.</p>
+<h3 id="03-Back-of-the-envelope-Estimation"><a href="#03-Back-of-the-envelope-Estimation" class="headerlink" title="03 Back-of-the-envelope Estimation"></a>03 Back-of-the-envelope Estimation</h3><h4 id="Power-of-two"><a href="#Power-of-two" class="headerlink" title="Power of two"></a>Power of two</h4><p>Although data volume can become enormous when dealing with distributed systems, calculation all boils down to the basics. To obtain correct calculations, it is critical to know the data volume unit using the power of 2. A byte is a sequence of 8 bits. An ASCII character uses one byte of memory (8 bits). Below is a table explaining the data volume unit.</p>
 <table>
 <thead>
 <tr>
@@ -412,7 +412,7 @@
 <td align="left">1 PB</td>
 </tr>
 </tbody></table>
-<h3 id="Latency-numbers-every-programmer-should-know"><a href="#Latency-numbers-every-programmer-should-know" class="headerlink" title="Latency numbers every programmer should know"></a>Latency numbers every programmer should know</h3><p>Dr. Dean from Google reveals the length of typical computer operations in 2010. Some numbers are outdated as computers become faster and more powerful. However, those numbers should still be able to give us an idea of the fastness and slowness of different computer operations.</p>
+<h4 id="Latency-numbers-every-programmer-should-know"><a href="#Latency-numbers-every-programmer-should-know" class="headerlink" title="Latency numbers every programmer should know"></a>Latency numbers every programmer should know</h4><p>Dr. Dean from Google reveals the length of typical computer operations in 2010. Some numbers are outdated as computers become faster and more powerful. However, those numbers should still be able to give us an idea of the fastness and slowness of different computer operations.</p>
 <table>
 <thead>
 <tr>
@@ -486,9 +486,91 @@
 <li>Compress data before sending it over the internet if possible.</li>
 <li>Data centers are usually in different regions, and it takes time to send data between them.</li>
 </ul>
-<h3 id="Availability-numbers"><a href="#Availability-numbers" class="headerlink" title="Availability numbers"></a>Availability numbers</h3><p>High availability is the ability of a system to be continuously operational for a desirably long period of time. High availability is measured as a percentage, with 100% means a service that has 0 downtime. Most services fall between 99% and 100%.</p>
+<h4 id="Availability-numbers"><a href="#Availability-numbers" class="headerlink" title="Availability numbers"></a>Availability numbers</h4><p>High availability is the ability of a system to be continuously operational for a desirably long period of time. High availability is measured as a percentage, with 100% means a service that has 0 downtime. Most services fall between 99% and 100%.</p>
 <p>A service level agreement (SLA) is a commonly used term for service providers. This is an agreement between you (the service provider) and your customer, and this agreement formally defines the level of uptime your service will deliver. Cloud providers Amazon [4], Google [5] and Microsoft [6] set their SLAs at 99.9% or above. Uptime is traditionally measured in nines. The more the nines, the better.</p>
-
+<h4 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h4><ul>
+<li>Rounding and Approximation. It is difficult to perform complicated math operations during the interview. For example, what is the result of “99987 / 9.1”? There is no need to spend valuable time to solve complicated math problems. Precision is not expected. Use round numbers and approximation to your advantage. The division question can be simplified as follows: “100,000 / 10”.</li>
+<li>Write down your assumptions. It is a good idea to write down your assumptions to be referenced later.</li>
+<li>Label your units. When you write down “5”, does it mean 5 KB or 5 MB? You might confuse yourself with this. Write down the units because “5 MB” helps to remove ambiguity.</li>
+<li>Commonly asked back-of-the-envelope estimations: QPS, peak QPS, storage, cache, number of servers, etc. You can practice these calculations when preparing for an interview. Practice makes perfect.</li>
+</ul>
+<h3 id="04-A-Framework-For-System-Design-Interviews"><a href="#04-A-Framework-For-System-Design-Interviews" class="headerlink" title="04 A Framework For System Design Interviews"></a>04 A Framework For System Design Interviews</h3><h4 id="A-4-step-process-for-effective-system-design-interview"><a href="#A-4-step-process-for-effective-system-design-interview" class="headerlink" title="A 4-step process for effective system design interview"></a>A 4-step process for effective system design interview</h4><h5 id="Step-1-Understand-the-problem-and-establish-design-scope"><a href="#Step-1-Understand-the-problem-and-establish-design-scope" class="headerlink" title="Step 1 - Understand the problem and establish design scope"></a>Step 1 - Understand the problem and establish design scope</h5><p>What kind of questions to ask? Ask questions to understand the exact requirements. Here is a list of questions to help you get started:</p>
+<ul>
+<li><p>What specific features are we going to build?</p>
+</li>
+<li><p>How many users does the product have?</p>
+</li>
+<li><p>How fast does the company anticipate to scale up? What are the anticipated scales in 3 months, 6 months, and a year?</p>
+</li>
+<li><p>What is the company’s technology stack? What existing services you might leverage to simplify the design?</p>
+</li>
+</ul>
+<h5 id="Step-2-Propose-high-level-design-and-get-buy-in"><a href="#Step-2-Propose-high-level-design-and-get-buy-in" class="headerlink" title="Step 2 - Propose high-level design and get buy-in"></a>Step 2 - Propose high-level design and get buy-in</h5><p>In this step, we aim to develop a high-level design and reach an agreement with the interviewer on the design. It is a great idea to collaborate with the interviewer during the process.</p>
+<ul>
+<li><p>Come up with an initial blueprint for the design. Ask for feedback. Treat your interviewer as a teammate and work together. Many good interviewers love to talk and get involved.</p>
+</li>
+<li><p>Draw box diagrams with key components on the whiteboard or paper. This might include clients (mobile/web), APIs, web servers, data stores, cache, CDN, message queue, etc.</p>
+</li>
+<li><p>Do back-of-the-envelope calculations to evaluate if your blueprint fits the scale constraints. Think out loud. Communicate with your interviewer if back-of-the-envelope is necessary before diving into it.</p>
+</li>
+</ul>
+<h5 id="Step-3-Design-deep-dive"><a href="#Step-3-Design-deep-dive" class="headerlink" title="Step 3 - Design deep dive"></a>Step 3 - Design deep dive</h5><p>You shall work with the interviewer to identify and prioritize components in the architecture. It is worth stressing that every interview is different. Sometimes, the interviewer may give off hints that she likes focusing on high-level design. Sometimes, for a senior candidate interview, the discussion could be on the system performance characteristics, likely focusing on the bottlenecks and resource estimations. In most cases, the interviewer may want you to dig into details of some system components. For URL shortener, it is interesting to dive into the hash function design that converts a long URL to a short one. For a chat system, how to reduce latency and how to support online/offline status are two interesting topics.</p>
+<h5 id="Step-4-Wrap-up"><a href="#Step-4-Wrap-up" class="headerlink" title="Step 4 - Wrap up"></a>Step 4 - Wrap up</h5><p>In this final step, the interviewer might ask you a few follow-up questions or give you the freedom to discuss other additional points. Here are a few directions to follow:</p>
+<ul>
+<li><p>The interviewer might want you to identify the system bottlenecks and discuss potential improvements. Never say your design is perfect and nothing can be improved. There is always something to improve upon. This is a great opportunity to show your critical thinking and leave a good final impression.</p>
+</li>
+<li><p>It could be useful to give the interviewer a recap of your design. This is particularly important if you suggested a few solutions. Refreshing your interviewer’s memory can be helpful after a long session.</p>
+</li>
+<li><p>Error cases (server failure, network loss, etc.) are interesting to talk about.</p>
+</li>
+<li><p>Operation issues are worth mentioning. How do you monitor metrics and error logs? How to roll out the system?</p>
+</li>
+<li><p>How to handle the next scale curve is also an interesting topic. For example, if your current design supports 1 million users, what changes do you need to make to support 10 million users?</p>
+</li>
+<li><p>Propose other refinements you need if you had more time.</p>
+</li>
+</ul>
+<p>To wrap up, we summarize a list of the Dos and Don’ts.</p>
+<p><strong>Dos</strong></p>
+<ul>
+<li><p>Always ask for clarification. Do not assume your assumption is correct.</p>
+</li>
+<li><p>Understand the requirements of the problem.</p>
+</li>
+<li><p>There is neither the right answer nor the best answer. A solution designed to solve the problems of a young startup is different from that of an established company with millions of users. Make sure you understand the requirements.</p>
+</li>
+<li><p>Let the interviewer know what you are thinking. Communicate with your interview.</p>
+</li>
+<li><p>Suggest multiple approaches if possible.</p>
+</li>
+<li><p>Once you agree with your interviewer on the blueprint, go into details on each component. Design the most critical components first.</p>
+</li>
+<li><p>Bounce ideas off the interviewer. A good interviewer works with you as a teammate.</p>
+</li>
+<li><p>Never give up.</p>
+</li>
+</ul>
+<p><strong>Don’ts</strong></p>
+<ul>
+<li><p>Don’t be unprepared for typical interview questions.</p>
+</li>
+<li><p>Don’t jump into a solution without clarifying the requirements and assumptions.</p>
+</li>
+<li><p>Don’t go into too much detail on a single component in the beginning. Give the high-level design first then drills down.</p>
+</li>
+<li><p>If you get stuck, don’t hesitate to ask for hints.</p>
+</li>
+<li><p>Again, communicate. Don’t think in silence.</p>
+</li>
+<li><p>Don’t think your interview is done once you give the design. You are not done until your interviewer says you are done. Ask for feedback early and often.</p>
+</li>
+</ul>
+<h5 id="Time-allocation-on-each-step"><a href="#Time-allocation-on-each-step" class="headerlink" title="Time allocation on each step"></a>Time allocation on each step</h5><p>System design interview questions are usually very broad, and 45 minutes or an hour is not enough to cover the entire design. Time management is essential. How much time should you spend on each step? The following is a very rough guide on distributing your time in a 45-minute interview session. Please remember this is a rough estimate, and the actual time distribution depends on the scope of the problem and the requirements from the interviewer.</p>
+<p>Step 1 Understand the problem and establish design scope: 3 - 10 minutes</p>
+<p>Step 2 Propose high-level design and get buy-in: 10 - 15 minutes</p>
+<p>Step 3 Design deep dive: 10 - 25 minutes</p>
+<p>Step 4 Wrap: 3 - 5 minutes</p>
+<h3 id="05-Design-A-Rate-Limiter"><a href="#05-Design-A-Rate-Limiter" class="headerlink" title="05 Design A Rate Limiter"></a>05 Design A Rate Limiter</h3>
           
         
       
@@ -605,7 +687,9 @@
       
         
           
-            <h2 id="Problem-TODO"><a href="#Problem-TODO" class="headerlink" title="Problem TODO"></a>Problem TODO</h2><h3 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h3><p><a href="https://leetcode.com/problems/maximum-score-of-a-good-subarray/" target="_blank" rel="noopener">1793. Maximum Score of a Good Subarray</a></p>
+            <h2 id="Problem-TODO"><a href="#Problem-TODO" class="headerlink" title="Problem TODO"></a>Problem TODO</h2><h3 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h3><p><a href="https://leetcode.com/problems/string-compression-ii/" target="_blank" rel="noopener">1531. String Compression II</a></p>
+<p><a href="https://leetcode.com/problems/largest-submatrix-with-rearrangements/" target="_blank" rel="noopener">1727. Largest Submatrix With Rearrangements</a></p>
+<p><a href="https://leetcode.com/problems/maximum-score-of-a-good-subarray/" target="_blank" rel="noopener">1793. Maximum Score of a Good Subarray</a></p>
 
           
         
