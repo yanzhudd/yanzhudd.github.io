@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Python,">
+  <meta name="keywords" content="Problems,">
 
 
 
@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="Round up a number to the nearest whole number math.ceil() method math.ceil(p / m) equals to (p + m - 1) // 2">
-<meta name="keywords" content="Python">
+<meta name="description" content="AlgorithmPrimeRefer to the problem 1584. Min Cost to Connect All Points 12345678910111213141516171819202122232425262728293031from heapq import heappush, heappopclass Solution:    def minCostConnectPoi">
+<meta name="keywords" content="Problems">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Round Number">
-<meta property="og:url" content="https://yanzhudd.github.io/p/1469733108.html">
+<meta property="og:title" content="Algorithm">
+<meta property="og:url" content="https://yanzhudd.github.io/p/401886746.html">
 <meta property="og:site_name" content="Kamfal&#39;s Blog">
-<meta property="og:description" content="Round up a number to the nearest whole number math.ceil() method math.ceil(p / m) equals to (p + m - 1) // 2">
+<meta property="og:description" content="AlgorithmPrimeRefer to the problem 1584. Min Cost to Connect All Points 12345678910111213141516171819202122232425262728293031from heapq import heappush, heappopclass Solution:    def minCostConnectPoi">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2023-04-24T15:38:31.634Z">
+<meta property="og:updated_time" content="2024-03-05T03:21:42.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Round Number">
-<meta name="twitter:description" content="Round up a number to the nearest whole number math.ceil() method math.ceil(p / m) equals to (p + m - 1) // 2">
+<meta name="twitter:title" content="Algorithm">
+<meta name="twitter:description" content="AlgorithmPrimeRefer to the problem 1584. Min Cost to Connect All Points 12345678910111213141516171819202122232425262728293031from heapq import heappush, heappopclass Solution:    def minCostConnectPoi">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://yanzhudd.github.io/p/1469733108.html">
+  <link rel="canonical" href="https://yanzhudd.github.io/p/401886746.html">
 
 
 
 
 
-  <title> Round Number | Kamfal's Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Algorithm | Kamfal's Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -283,7 +283,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://yanzhudd.github.io/p/1469733108.html">
+    <link itemprop="mainEntityOfPage" href="https://yanzhudd.github.io/p/401886746.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yanzhudd">
@@ -304,7 +304,7 @@
             
             
               
-                Round Number
+                Algorithm
               
             
           </h1>
@@ -319,8 +319,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-04-09T23:56:58+08:00">
-                2023-04-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-03-05T00:58:42+08:00">
+                2024-03-05
               </time>
             
 
@@ -355,11 +355,13 @@
       
 
       
-        <h2 id="Round-up-a-number-to-the-nearest-whole-number"><a href="#Round-up-a-number-to-the-nearest-whole-number" class="headerlink" title="Round up a number to the nearest whole number"></a>Round up a number to the nearest whole number</h2><ol>
-<li><code>math.ceil()</code> method</li>
-<li>math.ceil(p / m) equals to (p + m - 1) // 2</li>
-</ol>
+        <h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><h3 id="Prime"><a href="#Prime" class="headerlink" title="Prime"></a>Prime</h3><p>Refer to the problem <a href="https://leetcode.com/problems/min-cost-to-connect-all-points/" target="_blank" rel="noopener">1584. Min Cost to Connect All Points</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> heapq <span class="keyword">import</span> heappush, heappop</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minCostConnectPoints</span><span class="params">(self, points: List[List[int]])</span> -&gt; int:</span></span><br><span class="line">        n = len(points)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># build graph</span></span><br><span class="line">        graph = defaultdict(dict)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, n):</span><br><span class="line">                dist = abs(points[i][<span class="number">0</span>] - points[j][<span class="number">0</span>]) + abs(points[i][<span class="number">1</span>] - points[j][<span class="number">1</span>])</span><br><span class="line">                graph[i][j] = dist</span><br><span class="line">                graph[j][i] = dist</span><br><span class="line">        </span><br><span class="line">        min_heap = [(<span class="number">0</span>, <span class="number">0</span>)]  <span class="comment"># pair: (dist, vertex)</span></span><br><span class="line">        visited = set()</span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> len(visited) &lt; n:</span><br><span class="line">            dist, u = heappop(min_heap)</span><br><span class="line">            <span class="keyword">if</span> u <span class="keyword">in</span> visited:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            </span><br><span class="line">            visited.add(u)</span><br><span class="line">            ans += dist</span><br><span class="line">            <span class="keyword">for</span> v, w <span class="keyword">in</span> graph[u].items():</span><br><span class="line">                <span class="keyword">if</span> v <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">                    heappush(min_heap, (w, v))</span><br><span class="line">                    </span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
 
+<h3 id="Kruskal"><a href="#Kruskal" class="headerlink" title="Kruskal"></a>Kruskal</h3><p>Refer to the problem <a href="https://leetcode.com/problems/min-cost-to-connect-all-points/" target="_blank" rel="noopener">1584. Min Cost to Connect All Points</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UnionFind</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        self.parent = list(range(n))</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">union</span><span class="params">(self, u, v)</span>:</span></span><br><span class="line">        root1 = self.find(u)</span><br><span class="line">        root2 = self.find(v)</span><br><span class="line">        <span class="keyword">if</span> root1 == root2:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        </span><br><span class="line">        self.parent[root1] = root2</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find</span><span class="params">(self, u)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.parent[u] != u:</span><br><span class="line">            self.parent[u] = self.find(self.parent[u])</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> self.parent[u]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minCostConnectPoints</span><span class="params">(self, points: List[List[int]])</span> -&gt; int:</span></span><br><span class="line">        n = len(points)</span><br><span class="line">        </span><br><span class="line">        edges = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, n):</span><br><span class="line">                dist = abs(points[i][<span class="number">0</span>] - points[j][<span class="number">0</span>]) + abs(points[i][<span class="number">1</span>] - points[j][<span class="number">1</span>])</span><br><span class="line">                edges.append((dist, i, j))</span><br><span class="line">        </span><br><span class="line">        edges.sort()</span><br><span class="line">        uf = UnionFind(n)</span><br><span class="line">        </span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        edge_count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> dist, i, j <span class="keyword">in</span> edges:</span><br><span class="line">            <span class="keyword">if</span> uf.union(i, j):</span><br><span class="line">                ans += dist</span><br><span class="line">                edge_count += <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> edge_count == n - <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
       
     </div>
 
@@ -382,7 +384,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/Problems/" rel="tag"># Problems</a>
           
         </div>
       
@@ -395,8 +397,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/p/2255764225.html" rel="next" title="Monotonic Deque">
-                <i class="fa fa-chevron-left"></i> Monotonic Deque
+              <a href="/p/4116187304.html" rel="next" title="IT Words">
+                <i class="fa fa-chevron-left"></i> IT Words
               </a>
             
           </div>
@@ -405,8 +407,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/p/4222665165.html" rel="prev" title="Binary Search">
-                Binary Search <i class="fa fa-chevron-right"></i>
+              <a href="/p/2568140703.html" rel="prev" title="String">
+                String <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -523,7 +525,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Round-up-a-number-to-the-nearest-whole-number"><span class="nav-number">1.</span> <span class="nav-text">Round up a number to the nearest whole number</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm"><span class="nav-number">1.</span> <span class="nav-text">Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Prime"><span class="nav-number">1.1.</span> <span class="nav-text">Prime</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kruskal"><span class="nav-number">1.2.</span> <span class="nav-text">Kruskal</span></a></li></ol></li></ol></div>
             
 
           </div>

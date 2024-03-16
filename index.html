@@ -280,6 +280,250 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://yanzhudd.github.io/p/2568140703.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yanzhudd">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kamfal's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/p/2568140703.html" itemprop="url">
+                  String
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-03-16T18:52:38+08:00">
+                2024-03-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><h3 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h3><p><a href="https://leetcode.com/problems/shortest-palindrome/" target="_blank" rel="noopener">214. Shortest Palindrome</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://yanzhudd.github.io/p/401886746.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yanzhudd">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kamfal's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/p/401886746.html" itemprop="url">
+                  Algorithm
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-03-05T00:58:42+08:00">
+                2024-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><h3 id="Prime"><a href="#Prime" class="headerlink" title="Prime"></a>Prime</h3><p>Refer to the problem <a href="https://leetcode.com/problems/min-cost-to-connect-all-points/" target="_blank" rel="noopener">1584. Min Cost to Connect All Points</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> heapq <span class="keyword">import</span> heappush, heappop</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minCostConnectPoints</span><span class="params">(self, points: List[List[int]])</span> -&gt; int:</span></span><br><span class="line">        n = len(points)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># build graph</span></span><br><span class="line">        graph = defaultdict(dict)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, n):</span><br><span class="line">                dist = abs(points[i][<span class="number">0</span>] - points[j][<span class="number">0</span>]) + abs(points[i][<span class="number">1</span>] - points[j][<span class="number">1</span>])</span><br><span class="line">                graph[i][j] = dist</span><br><span class="line">                graph[j][i] = dist</span><br><span class="line">        </span><br><span class="line">        min_heap = [(<span class="number">0</span>, <span class="number">0</span>)]  <span class="comment"># pair: (dist, vertex)</span></span><br><span class="line">        visited = set()</span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> len(visited) &lt; n:</span><br><span class="line">            dist, u = heappop(min_heap)</span><br><span class="line">            <span class="keyword">if</span> u <span class="keyword">in</span> visited:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            </span><br><span class="line">            visited.add(u)</span><br><span class="line">            ans += dist</span><br><span class="line">            <span class="keyword">for</span> v, w <span class="keyword">in</span> graph[u].items():</span><br><span class="line">                <span class="keyword">if</span> v <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">                    heappush(min_heap, (w, v))</span><br><span class="line">                    </span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+
+<h3 id="Kruskal"><a href="#Kruskal" class="headerlink" title="Kruskal"></a>Kruskal</h3><p>Refer to the problem <a href="https://leetcode.com/problems/min-cost-to-connect-all-points/" target="_blank" rel="noopener">1584. Min Cost to Connect All Points</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UnionFind</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        self.parent = list(range(n))</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">union</span><span class="params">(self, u, v)</span>:</span></span><br><span class="line">        root1 = self.find(u)</span><br><span class="line">        root2 = self.find(v)</span><br><span class="line">        <span class="keyword">if</span> root1 == root2:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        </span><br><span class="line">        self.parent[root1] = root2</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find</span><span class="params">(self, u)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.parent[u] != u:</span><br><span class="line">            self.parent[u] = self.find(self.parent[u])</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> self.parent[u]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minCostConnectPoints</span><span class="params">(self, points: List[List[int]])</span> -&gt; int:</span></span><br><span class="line">        n = len(points)</span><br><span class="line">        </span><br><span class="line">        edges = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, n):</span><br><span class="line">                dist = abs(points[i][<span class="number">0</span>] - points[j][<span class="number">0</span>]) + abs(points[i][<span class="number">1</span>] - points[j][<span class="number">1</span>])</span><br><span class="line">                edges.append((dist, i, j))</span><br><span class="line">        </span><br><span class="line">        edges.sort()</span><br><span class="line">        uf = UnionFind(n)</span><br><span class="line">        </span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        edge_count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> dist, i, j <span class="keyword">in</span> edges:</span><br><span class="line">            <span class="keyword">if</span> uf.union(i, j):</span><br><span class="line">                ans += dist</span><br><span class="line">                edge_count += <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> edge_count == n - <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/p/401886746.html#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://yanzhudd.github.io/p/4116187304.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -356,8 +600,7 @@
 
       
         
-          
-            <h2 id="Engineering-Words"><a href="#Engineering-Words" class="headerlink" title="Engineering Words"></a>Engineering Words</h2><h3 id="Chinese-To-English"><a href="#Chinese-To-English" class="headerlink" title="Chinese To English"></a>Chinese To English</h3><ul>
+          <h2 id="Engineering-Words"><a href="#Engineering-Words" class="headerlink" title="Engineering Words"></a>Engineering Words</h2><h3 id="Chinese-To-English"><a href="#Chinese-To-English" class="headerlink" title="Chinese To English"></a>Chinese To English</h3><ul>
 <li><p>圆括号（英语：parentheses或英语：round brackets），中文中又称小括号、括号。</p>
 </li>
 <li><p>方括号（英语：brackets或英语：square brackets），中文中又称中括号。</p>
@@ -379,38 +622,13 @@
 <li><p>arithmetic: 1. n. 算术 2. 计算</p>
 </li>
 </ul>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ul>
-<li><p>midway point</p>
-</li>
-<li><p>middle point</p>
-</li>
-<li><p>shift it up/down/left/right</p>
-</li>
-<li><p>leftmost/rightmost</p>
-</li>
-<li><p>delimiter</p>
-</li>
-<li><p>pivot</p>
-</li>
-<li><p>double ended queue</p>
-</li>
-</ul>
-<ul>
-<li><p>partition it into two halves</p>
-</li>
-<li><p>we’re going to try every single value from 1 all the way up to 11 which happens to be the max value of piles, and the first value that we get that allows us to eat every single pile in less than or equal to eight hours is going to be our output</p>
-</li>
-<li><p>went over the threshold</p>
-</li>
-<li><p>let’s start searching to the right of our range</p>
-</li>
-<li><p>none of these values are ever going to be considered again </p>
-</li>
-<li><p>x ** 2 + y ** 2: take x to the power of 2 plus y to the power of 2, and we won’t take sqaure root </p>
-</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/p/4116187304.html#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -901,246 +1119,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://yanzhudd.github.io/p/287636738.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yanzhudd">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kamfal's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/p/287636738.html" itemprop="url">
-                  Problems TODO
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-10-23T00:02:51+08:00">
-                2023-10-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Problems-TODO"><a href="#Problems-TODO" class="headerlink" title="Problems TODO"></a>Problems TODO</h2><h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><p><a href="https://leetcode.com/problems/sum-of-subarray-minimums/" target="_blank" rel="noopener">907. Sum of Subarray Minimums</a></p>
-<p><a href="https://leetcode.com/problems/string-compression-ii/" target="_blank" rel="noopener">1531. String Compression II</a></p>
-<p><a href="https://leetcode.com/problems/largest-submatrix-with-rearrangements/" target="_blank" rel="noopener">1727. Largest Submatrix With Rearrangements</a></p>
-<p><a href="https://leetcode.com/problems/maximum-score-of-a-good-subarray/" target="_blank" rel="noopener">1793. Maximum Score of a Good Subarray</a></p>
-<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p><a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank" rel="noopener">300. Longest Increasing Subsequence</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://yanzhudd.github.io/p/869174310.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yanzhudd">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kamfal's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/p/869174310.html" itemprop="url">
-                  Algorithm: String
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-10-16T00:12:14+08:00">
-                2023-10-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Algorithm-String"><a href="#Algorithm-String" class="headerlink" title="Algorithm: String"></a>Algorithm: String</h2><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://necusjz.github.io/p/1487438784.html" target="_blank" rel="noopener">necusjz blogs</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1188,7 +1166,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
