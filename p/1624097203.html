@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="ArrayLeetcode41. First Missing Positive 135. Candy 152. Maximum Product Subarray 169. Majority Element 300. Longest Increasing Subsequence 452. Minimum Number of Arrows to Burst Balloons 456. 132 Patt">
+<meta name="description" content="ArrayLeetcode31. Next Permutation 41. First Missing Positive 135. Candy 152. Maximum Product Subarray 169. Majority Element 287. Find the Duplicate Number 300. Longest Increasing Subsequence 452. Mini">
 <meta name="keywords" content="Problems">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Array">
 <meta property="og:url" content="https://yanzhudd.github.io/p/1624097203.html">
 <meta property="og:site_name" content="Kamfal&#39;s Blog">
-<meta property="og:description" content="ArrayLeetcode41. First Missing Positive 135. Candy 152. Maximum Product Subarray 169. Majority Element 300. Longest Increasing Subsequence 452. Minimum Number of Arrows to Burst Balloons 456. 132 Patt">
+<meta property="og:description" content="ArrayLeetcode31. Next Permutation 41. First Missing Positive 135. Candy 152. Maximum Product Subarray 169. Majority Element 287. Find the Duplicate Number 300. Longest Increasing Subsequence 452. Mini">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2024-03-16T10:25:29.783Z">
+<meta property="og:updated_time" content="2024-03-24T12:28:04.585Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Array">
-<meta name="twitter:description" content="ArrayLeetcode41. First Missing Positive 135. Candy 152. Maximum Product Subarray 169. Majority Element 300. Longest Increasing Subsequence 452. Minimum Number of Arrows to Burst Balloons 456. 132 Patt">
+<meta name="twitter:description" content="ArrayLeetcode31. Next Permutation 41. First Missing Positive 135. Candy 152. Maximum Product Subarray 169. Majority Element 287. Find the Duplicate Number 300. Longest Increasing Subsequence 452. Mini">
 
 
 
@@ -355,10 +355,12 @@
       
 
       
-        <h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><h3 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h3><p><a href="https://leetcode.com/problems/first-missing-positive/" target="_blank" rel="noopener">41. First Missing Positive</a></p>
+        <h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><h3 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h3><p><a href="https://leetcode.com/problems/next-permutation/" target="_blank" rel="noopener">31. Next Permutation</a></p>
+<p><a href="https://leetcode.com/problems/first-missing-positive/" target="_blank" rel="noopener">41. First Missing Positive</a></p>
 <p><a href="https://leetcode.com/problems/candy/" target="_blank" rel="noopener">135. Candy</a></p>
 <p><a href="https://leetcode.com/problems/maximum-product-subarray/" target="_blank" rel="noopener">152. Maximum Product Subarray</a></p>
 <p><a href="https://leetcode.com/problems/majority-element/" target="_blank" rel="noopener">169. Majority Element</a></p>
+<p><a href="https://leetcode.com/problems/find-the-duplicate-number/" target="_blank" rel="noopener">287. Find the Duplicate Number</a></p>
 <p><a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank" rel="noopener">300. Longest Increasing Subsequence</a></p>
 <p><a href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/" target="_blank" rel="noopener">452. Minimum Number of Arrows to Burst Balloons</a></p>
 <p><a href="https://leetcode.com/problems/132-pattern/" target="_blank" rel="noopener">456. 132 Pattern</a></p>
@@ -366,7 +368,8 @@
 <p><a href="https://leetcode.com/problems/maximum-sum-circular-subarray/" target="_blank" rel="noopener">918. Maximum Sum Circular Subarray</a></p>
 <p><a href="https://leetcode.com/problems/restore-the-array/" target="_blank" rel="noopener">1416. Restore The Array</a></p>
 <p><a href="https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position/" target="_blank" rel="noopener">1964. Find the Longest Valid Obstacle Course at Each Position</a></p>
-
+<h3 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h3><p><a href="https://leetcode.com/discuss/interview-question/346621/Google-or-Phone-Screen-or-Min-swaps-to-sort-array" target="_blank" rel="noopener">Google | Phone Screen | Min swaps to sort array</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">min_swap</span><span class="params">(nums)</span>:</span></span><br><span class="line">    n = len(nums)</span><br><span class="line">    visited = [<span class="literal">False</span>] * n</span><br><span class="line">    inverted_idx = &#123;num: idx <span class="keyword">for</span> idx, num <span class="keyword">in</span> enumerate(sorted(nums))&#125;</span><br><span class="line"></span><br><span class="line">    num = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        count = <span class="number">-1</span></span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">not</span> visited[i] <span class="keyword">and</span> i != inverted_idx[nums[i]]:</span><br><span class="line">            visited[i] = <span class="literal">True</span></span><br><span class="line">            i = inverted_idx[nums[i]]</span><br><span class="line"></span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        num += max(<span class="number">0</span>, count)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> num</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -484,7 +487,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -495,7 +498,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -530,7 +533,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Array"><span class="nav-number">1.</span> <span class="nav-text">Array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode"><span class="nav-number">1.1.</span> <span class="nav-text">Leetcode</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Array"><span class="nav-number">1.</span> <span class="nav-text">Array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode"><span class="nav-number">1.1.</span> <span class="nav-text">Leetcode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Codes"><span class="nav-number">1.2.</span> <span class="nav-text">Codes</span></a></li></ol></li></ol></div>
             
 
           </div>

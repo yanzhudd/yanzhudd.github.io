@@ -89,7 +89,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kamfal&#39;s Blog">
-<meta property="og:url" content="https://yanzhudd.github.io/archives/2024/index.html">
+<meta property="og:url" content="https://yanzhudd.github.io/page/8/index.html">
 <meta property="og:site_name" content="Kamfal&#39;s Blog">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://yanzhudd.github.io/archives/2024/">
+  <link rel="canonical" href="https://yanzhudd.github.io/page/8/">
 
 
 
 
 
-  <title> Archive | Kamfal's Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Kamfal's Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -152,7 +152,9 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-right  page-archive  ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-right 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -267,273 +269,152 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  
 
-    <span class="archive-page-counter">
-      
-      
-       
-      
-      OK! 36 posts in total. Keep on posting.
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://yanzhudd.github.io/p/3401759717.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yanzhudd">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kamfal's Blog">
     </span>
 
     
+      <header class="post-header">
 
-      
-      
-      
-
-      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2024">2024</h2>
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/p/3401759717.html" itemprop="url">
+                  Python 工匠
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-03-04T16:57:03+08:00">
+                2023-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
         
-            <a class="post-title-link" href="/p/4237049889.html" itemprop="url">
-              
-                <span itemprop="name">Researchers</span>
-              
+          <h2 id="第-1-章-变量与注释"><a href="#第-1-章-变量与注释" class="headerlink" title="第 1 章 变量与注释"></a>第 1 章 变量与注释</h2><h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><h4 id="变量常见用法"><a href="#变量常见用法" class="headerlink" title="变量常见用法"></a>变量常见用法</h4><p>你可以在一行语句里同时操作多个变量，比如调换两个变量所指向的值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>author, reader = <span class="string">'piglei'</span>, <span class="string">'raymond'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>author, reader = reader, author</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>author</span><br><span class="line"><span class="string">'raymond'</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="变量解包"><a href="#变量解包" class="headerlink" title="变量解包"></a>变量解包</h5><p>只要用星号表达式（*variables）作为变量名，它便会贪婪地捕获多个值对象，并将捕获到的内容作为列表赋值给 variables。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>data = [<span class="string">'piglei'</span>, <span class="string">'apple'</span>, <span class="string">'orange'</span>, <span class="string">'banana'</span>, <span class="number">100</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>username, *fruits, score = data</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>username</span><br><span class="line"><span class="string">'piglei'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>fruits</span><br><span class="line">[<span class="string">'apple'</span>, <span class="string">'orange'</span>, <span class="string">'banana'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>score</span><br><span class="line"><span class="number">100</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="单下划线变量名"><a href="#单下划线变量名" class="headerlink" title="单下划线变量名 _"></a>单下划线变量名 _</h5><p>它作为一个无意义的占位符出现在赋值语句中。而在 Python 交互式命令行（直接执行 python 命令进入的交互环境）里，_ 变量还有一层特殊含义——默认保存我们输入的上个表达式的返回值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'foo'</span>.upper()</span><br><span class="line"><span class="string">'FOO'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(_)</span><br><span class="line">FOO</span><br></pre></td></tr></table></figure>
+
+<h4 id="给变量注明类型"><a href="#给变量注明类型" class="headerlink" title="给变量注明类型"></a>给变量注明类型</h4><p>Python 官方推荐的 Sphinx 格式文档后的效果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">remove_invalid</span><span class="params">(items)</span>:</span></span><br><span class="line">    <span class="string">""" 剔除 items 里面无效的元素</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    : param items: 待剔除对象</span></span><br><span class="line"><span class="string">    : type items: 包含整数的列表，[int, ...]</span></span><br><span class="line"><span class="string">    """</span></span><br></pre></td></tr></table></figure>
+
+<p>相比编写 Sphinx 格式文件，我其实更推荐使用类型注释，因为它是 Python 的内置功能。比如 func(value: str) 表示函数的 value 参数为字符串类型。</p>
+<p>下面是给 remove_invalid() 函数添加类型注释后的样子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> List</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">remove_invalid</span><span class="params">(items: List[int])</span>:</span></span><br><span class="line">    <span class="string">""" 剔除 items 里面无效的元素</span></span><br><span class="line"><span class="string">    ... ...</span></span><br><span class="line"><span class="string">    """</span></span><br></pre></td></tr></table></figure>
+
+<p>注：“类型注释”只是一种有关类型的注释，不提供任何校验功能。要校验类型正确性，需要使用其他静态类型检查工具（如 mypy 等）。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/p/3401759717.html#more" rel="contents">
+              Read more &raquo;
             </a>
+          </div>
+          <!--/noindex-->
         
-      </h1>
+      
+    </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2024-03-28T20:47:34+08:00" content="2024-03-28">
-          03-28
-        </time>
-      </div>
+    <div>
+      
+    </div>
 
-    </header>
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </article>
 
 
-
     
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/p/276890998.html" itemprop="url">
-              
-                <span itemprop="name">Interview Questions</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2024-03-25T21:06:36+08:00" content="2024-03-25">
-          03-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/p/3354778820.html" itemprop="url">
-              
-                <span itemprop="name">English Words</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2024-03-24T21:05:31+08:00" content="2024-03-24">
-          03-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/p/2568140703.html" itemprop="url">
-              
-                <span itemprop="name">String</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2024-03-16T18:52:38+08:00" content="2024-03-16">
-          03-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/p/401886746.html" itemprop="url">
-              
-                <span itemprop="name">Algorithm</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2024-03-05T00:58:42+08:00" content="2024-03-05">
-          03-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/p/4116187304.html" itemprop="url">
-              
-                <span itemprop="name">IT Words</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2024-01-13T23:51:22+08:00" content="2024-01-13">
-          01-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/p/3273386250.html" itemprop="url">
-              
-                <span itemprop="name">现代C++编程实战</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2024-01-01T23:30:27+08:00" content="2024-01-01">
-          01-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
   </section>
 
   
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span>
+  </nav>
 
 
           
@@ -716,12 +597,6 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
-
 
   
 
